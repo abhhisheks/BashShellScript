@@ -17,5 +17,9 @@ if  [ H > 150 ] && [ W > 150 ]; then
    convert temporary/123.jpeg temporary/123_format.png
    #Below command is used to rotate an image
    convert temporary/123.jpeg -rotate 90 temporary/123_format.png
+   #To copy original image
+   convert -quality 100 -normalize temporary/123.jpeg 117_norm.png
+   #Resize to 250x250  
+   convert -quality 100 -resize 250  temporary/123.jpeg 117_resize.png
    echo "conversion done"
 fi
